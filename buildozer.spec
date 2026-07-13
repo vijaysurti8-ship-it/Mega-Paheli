@@ -1,9 +1,13 @@
 [app]
+
 title = Mega Paheli Universe
 package.name = megapaheli
 package.domain = org.vijaysurti
+
 source.dir = .
-source.include_exts = py,png,jpg,jpeg,mp3,json
+source.include_exts = py,png,jpg,jpeg,gif,mp3,wav,json,ttf
+source.exclude_dirs = .git,.github,bin,build,__pycache__
+
 version = 1.0
 
 requirements = python3,pygame
@@ -11,13 +15,20 @@ requirements = python3,pygame
 orientation = portrait
 fullscreen = 1
 
-android.api = 33
-android.minapi = 21
-android.archs = arm64-v8a,armeabi-v7a
-
-presplash.filename =
 icon.filename =
+presplash.filename =
+
+android.api = 34
+android.minapi = 21
+android.sdk = 34
+android.ndk = 25b
+android.accept_sdk_license = True
+
+android.permissions = INTERNET
+
+android.archs = arm64-v8a, armeabi-v7a
+
+log_level = 2
 
 [buildozer]
-log_level = 2
 warn_on_root = 1
